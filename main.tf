@@ -38,7 +38,7 @@ resource "aws_security_group" "djenkins_security_group" {
 }
 
 # EC2 Instance configuration for Jenkins on Amazon Linux
-resource "aws_instance" "sjenkins" {
+resource "aws_instance" "djenkins" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   key_name               = var.key_name
