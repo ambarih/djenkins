@@ -43,7 +43,7 @@ resource "aws_instance" "djenkins" {
   instance_type          = var.instance_type
   key_name               = var.key_name
   subnet_id              = var.subnet_id
-  vpc_security_group_ids = [aws_security_group.pgs_security_group.id]
+  vpc_security_group_ids = [aws_security_group.djenkins_security_group.id]
   associate_public_ip_address = true
 
   # Call the jenkins-install.sh script from user_data
